@@ -11,6 +11,8 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/aos/3.0.0-beta.6/aos.css" rel="stylesheet">
 
+    <link rel="stylesheet" href="css/tailwind.css" />
+
     <link rel="shortcut icon" href="">
     <link rel="prefetch" href="">
     <title>Untitled</title>
@@ -344,7 +346,6 @@ twindObserve.observe(document.documentElement, create({
 document.documentElement.hidden = false;
 window.innerWidth
     </script>
-    <style></style>
     <style>
         .d-js {
             display: none !important;
@@ -361,7 +362,6 @@ window.innerWidth
 </head>
 
 <body>
-
     <nav class="navbar sticky top-0 navbar-dark bg-black" id="navbar">
         <div class="container">
             <a class="navbar-brand text-white" href="/">
@@ -704,14 +704,9 @@ window.innerWidth
             </div>
         </div>
     </footer>
-    <script>
-        poweredByHTML = '<div class="position-fixed fixed px-2 " style="bottom: 10px;right:0; "><a href="https://versoly.com " target="_blank " class="btn btn-dark btn-sm px-2 "><img alt="Versoly Logo " height="20 " width="20 " class="mt-n1 mr-1
-        " src="
-        https: //d1pnnwteuly8z3.cloudfront.net/images/dafc1e05-b0e8-4c6d-b375-4a62333bbd5a/e9b5a585-0df6-4d25-b7f9-070785381e7c.png "><span>Made in Versoly</span></a></div>'
-            setTimeout(() => document.body.insertAdjacentHTML('beforeend', poweredByHTML), 7000)
-    </script>
 
-    <script src="//cdnjs.cloudflare.com/ajax/libs/webfont/1.6.28/webfontloader.js "></script>
+
+
     <script>
         WebFont.load({
             google: {
@@ -719,241 +714,7 @@ window.innerWidth
             }
         })
     </script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/3.0.0-beta.6/aos.js "></script>
-    <script type="module " src="https://cdnjs.cloudflare.com/ajax/libs/fetch/3.0.0/fetch.min.js "></script>
-    <script>
-        (function() {
-            d = document;
-            s = d.createElement("script ");
-            s.src = "https://cdnjs.cloudflare.com/ajax/libs/popper.js/2.9.2/umd/popper.min.js ";
-            d.body.appendChild(s);
-        })();
-    </script>
-    <script>
-        (function() {
-            d = document;
-            s = d.createElement("script ");
-            s.src = "https://d1pnnwteuly8z3.cloudfront.net/libs/tailstrap/0.0.6/tailstrap.min.js ";
-            d.body.appendChild(s);
-        })();
-    </script>
-    <script>
-        var style = document.createElement('style');
-        if (document.getElementById("navbar ")) {
-            style.innerHTML =
-                'section, div {scroll-margin-top: ' + document.getElementById("navbar ").offsetHeight + 'px}';
-            var ref = document.querySelector('script');
-            ref.parentNode.insertBefore(style, ref);
-        }
-        AOS.init({
-            duration: 700,
-            startEvent: "load "
-        });
-        let blocks = {
-        "216143e1-50f1-44c2-8f98-cf46efbcbe26 ": "<section class=\ "
-        bg - primary py - 20\ " id=\ "
-        cta\ ">\n <
-        div class = \"container\">\n <
-        div class = \"row bg-primary\">\n <
-        div class = \"col sm:w-10/12 md:w-9/12 lg:w-7/12 xl:w-6/12 mx-auto text-center\">\n <
-        div class = \"rounded p-6 bg-primary\">\n <
-        h2 class = \"letter-spacing-xs mb-2 font-black text-dark\">Oops</h2>\n <
-        p class = \"mb-6 text-dark\">Thank You for trying to sign up. We will let you know as soon as we launch</p>\n <a class=\ "
-        btn btn - lg letter - spacing - sm text - lg font - semibold btn - dark rounded - 2 xl block w - full\ " href=\
-                                            "
-        https: //merry-extol-1635377879.versoly.page/\">Thank You</a>\n </div>\n </div>\n </div>\n </div>\n</section>" }; window.waitForElm = (s) => { let d = document return new Promise(resolve => { if (d.querySelector(s)) { return resolve(d.querySelector(s)); } const
-            observer = new MutationObserver(mutations => {
-            if (d.querySelector(s)) {
-                resolve(d.querySelector(s));
-                observer.disconnect();
-            }
-        });observer.observe(d.body, {
-            childList: true,
-            subtree: true
-        });
-        });
-        }
-        const addModalEventListenerToModals = () => document.querySelectorAll('[data-toggle="modal"]').forEach(element => {
-            if (element.getAttribute('aria-label')) {
-                return
-            } else {
-                element.setAttribute('aria-label', 'modal')
-            }
-            let t = element.dataset.options
-            let modalOptions = t ? JSON.parse(t.split(`'`).join(`"`)) : {};
-            modalOptions = {
-                id: 'vModal',
-                modalContent: '',
-                ...modalOptions
-            }
-            if (modalOptions.imgSrc) {
-                modalOptions.modalContent = `<img src="${modalOptions.imgSrc}">`
-            }
-            if (modalOptions.iframeSrc) {
-                modalOptions.modalContent = `
-    <div class="embed-responsive embed-responsive-16by9 aspect-w-16 aspect-h-9">
-        <iframe allow="autoplay" class="embed-responsive-item" src="${modalOptions.iframeSrc}" allowfullscreen="" autoplay=""></iframe>
-    </div>`
-            }
-            if (modalOptions.globalBlockId) {
-                modalOptions.modalContent = blocks[modalOptions.globalBlockId]
-            }
-            const addModal = () => {
-                window.removeModal = () => {
-                    let modal = document.getElementById('v-modal') modal.classList.remove('opacity-100')
-                    setTimeout(() => {
-                        modal.remove() document.body.style.overflow = ''
-                    }, 500)
-                }
-                let onEscape = e => e.keyCode == 27 && removeModal() document.addEventListener('keydown', onEscape);
-                let modalHTML = `
-    <div id="v-modal" class="modal">
-        <div class="modal-content modal-${modalOptions.size}">
-            ${modalOptions.modalContent}
-        </div>
 
-        <button onclick="removeModal()" type="button" class="fixed right-0 top-0 z-50 text-white px-5 close" data-dismiss="modal" aria-label="Close">
-    <span class="text-4xl" aria-hidden="true">&times;</span>
-  </button>
-
-        <div onclick="removeModal()" class="modal-bg"></div>
-    </div>
-    `;
-                document.body.style.overflow = 'hidden'
-                document.body.insertAdjacentHTML('beforeend', modalHTML) window.waitForElm('#v-modal').then(elm => {
-                    setTimeout(() => elm.classList.add('opacity-100'), 50)
-                });
-                const forms = document.querySelectorAll('[data-formid]');
-                for (const form of forms) {
-                    if (!form.getAttribute('data-has-form-eventlistener')) {
-                        form.addEventListener("submit", function(e) {
-                            sendFormData(e, form)
-                        });
-                        form.setAttribute('data-has-form-eventlistener', 'true')
-                    }
-                }
-                if (window.attachVCollections) {
-                    window.attachVCollections()
-                }
-            }
-            element.addEventListener('click', addModal)
-        });
-        addModalEventListenerToModals() const formScripts = {}
-        window.vPageLoadedAt = Date.now() setTimeout(() => {
-            let inputs = [...document.getElementsByTagName("input")]
-            inputs.forEach(i => {
-                if (i.name === 'email_second' || i.name === 'name_second') {
-                    i.setAttribute('aria-hidden', 'true') i.setAttribute('tabindex', '-1') i.setAttribute('autocomplete', 'false')
-                }
-            })
-        }, 3000) const sendFormData = function(e, form) {
-            e.preventDefault() const formId = form.dataset.formid
-            if (window.vPageLoadedAt + 3000 > Date.now()) {
-                return null
-            }
-            if (formScripts[formId] && formScripts[formId].pre) {
-                eval(formScripts[formId].pre)
-            }
-            const filteredForms = document.querySelectorAll('[data-formId="' +
-                formId + '"]') let formIndex = 0 filteredForms.forEach((f, index) => {
-                if (f === form) {
-                    formIndex = index
-                }
-            }) const errorElement = document.querySelectorAll('[data-form-errorid="' + formId + '"]')[formIndex]
-            let inputs = [...form.getElementsByTagName("input"),
-                ...form.getElementsByTagName("textarea"), ...form.getElementsByTagName("select")
-            ]
-            let data = {
-                created: Date.now(),
-                url: location.pathname + location.search
-            }
-            inputs.forEach(input => {
-                    if (input.type === 'radio') {
-                        if (input.checked) {
-                            data[input.name] = input.value
-                        }
-                        return
-                    }
-                    if (input.tagName === 'SELECT') {
-                        data[input.name] = input.options[input.selectedIndex].value
-                        return
-                    }
-                    if (input.type === 'checkbox') {
-                        data[input.name] = input.checked + ""
-                        return
-                    }
-                    data[input.name] = input.value
-                }) if (!!data['email_second'] ||
-                    !!data['name_second']) {
-                    return null
-                }
-            delete data['email_second'];
-            delete data['name_second'];
-            const submitButton = form.querySelector(('button[type="submit"]')) const buttonInnerHTML = submitButton.innerHTML submitButton.disabled = true
-            let loadingButtonInnerHTML = '<i class="fa fa-spinner fa-spin"></i> Loading'
-            if (submitButton.getAttribute('data-loading-html')) {
-                loadingButtonInnerHTML = submitButton.getAttribute('data-loading-html')
-            }
-            submitButton.innerHTML = loadingButtonInnerHTML data = JSON.stringify(data)
-            fetch('https://api.versoly.com/v1/form/submit', {
-                method: 'POST',
-                headers: {
-                    'Content-Type': 'application/json'
-                },
-                body: JSON.stringify({
-                    formId: formId,
-                    data: data
-                })
-            }).then(function() {
-                if (form.dataset["successUrl"]) {
-                    window.location.replace(form.dataset["successUrl"])
-                } else {
-                    const successElement = document.querySelectorAll('[data-form-successid="' + formId + '"]')[formIndex]
-                    if (successElement) {
-                        successElement.classList.remove("d-js");
-                        errorElement.classList.add("d-js");
-                        form.classList.add("d-js");
-                        successElement.classList.remove("d-none");
-                        errorElement.classList.add("d-none");
-                        form.classList.add("d-none");
-                    }
-                }
-                if (form.getAttribute('data-eventid')) {
-                    window.versoly.trackEvent({
-                        name: form.getAttribute('data-eventid')
-                    })
-                }
-                if (formScripts[formId] && formScripts[formId].post) {
-                    eval(formScripts[formId].post)
-                }
-                submitButton.disabled = false submitButton.innerHTML = buttonInnerHTML
-            }).catch(function(error) {
-                if (errorElement) {
-                    errorElement.classList.remove("d-js");
-                    errorElement.classList.remove("d-none");
-                }
-                if (formScripts[formId] && formScripts[formId].failed) {
-                    eval(formScripts[formId].failed)
-                }
-                submitButton.disabled = false submitButton.innerHTML = buttonInnerHTML
-            })
-        }
-        const forms = document.querySelectorAll('[data-formid]');
-        for (const form of forms) {
-            if (!form.getAttribute('data-has-form-eventlistener')) {
-                form.addEventListener("submit", function(e) {
-                    sendFormData(e, form)
-                });
-                form.setAttribute('data-has-form-eventlistener', 'true')
-            }
-        }(function() {
-            d = document;
-            c = d.createElement('link');
-            c.href = '//cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css';
-            c.rel = 'stylesheet';
-            d.head.appendChild(c);
-        })();
-    </script>
 
 </body>
 

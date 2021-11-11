@@ -1,0 +1,27 @@
+{
+    "name": "tradepool-landingpage",
+    "version": "1.0.0",
+    "description": "",
+    "main": "app.js",
+    "scripts": {
+        "test": "echo \"Error: no test specified\" && exit 1",
+        "dev": "vite",
+        "build": "vite build"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/tradepool/tradepool-landing-page.git"
+    },
+    "author": "",
+    "license": "ISC",
+    "bugs": {
+        "url": "https://github.com/tradepool/tradepool-landing-page/issues"
+    },
+    "homepage": "https://github.com/tradepool/tradepool-landing-page#readme",
+    "devDependencies": {
+        "autoprefixer": "^10.4.0",
+        "postcss": "^8.3.11",
+        "tailwindcss": "^2.2.19",
+        "vite": "^2.6.14"
+    }
+}
